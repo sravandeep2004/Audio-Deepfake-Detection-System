@@ -1,8 +1,12 @@
 {
+  "buildCommand": "pip install --upgrade pip && pip install -r requirements.txt",
   "builds": [
     { "src": "app.py", "use": "@vercel/python" }
   ],
   "routes": [
     { "src": "/(.*)", "dest": "app.py" }
-  ]
+  ],
+  "env": {
+    "VERCEL_PYTHON_VERSION": "3.10"
+  }
 }
